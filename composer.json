@@ -1,0 +1,51 @@
+{
+    "name": "orion-search/opensearch",
+    "description": "Orion engine adapter for OpenSearch 2.19 and 3.x on the official client: strict mappings, externally versioned writes and deletes, the neutral query AST compiled to DSL, k-NN through the bundled plugin",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "2am.tech",
+            "homepage": "https://2am.tech"
+        }
+    ],
+    "keywords": [
+        "search",
+        "opensearch",
+        "reindex",
+        "hybrid-search",
+        "vector-search"
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.9",
+        "opensearch-project/opensearch-php": "^2.7",
+        "orion-search/core": "^0.1",
+        "php": ">=8.3"
+    },
+    "require-dev": {
+        "orion-search/testing": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Orion\\OpenSearch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Orion\\OpenSearch\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
