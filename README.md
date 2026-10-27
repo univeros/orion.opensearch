@@ -3,6 +3,10 @@
 Orion's engine adapter for OpenSearch 2.19 and 3.x, on the official `opensearch-project/opensearch-php` client
 (one client major speaks to both server lines).
 
+```sh
+composer require orion-search/opensearch
+```
+
 ```php
 use OpenSearch\GuzzleClientFactory;
 use Orion\OpenSearch\OpenSearchEngine;
@@ -26,3 +30,5 @@ $engines = new EngineRegistry(opensearch: new OpenSearchEngine((new GuzzleClient
   `HybridFusion` is reported false and core fuses.
 
 Proven by `Orion\Testing\EngineConformanceTestCase` against OpenSearch 3.9 and 2.19.
+
+Connecting it and how it compares with the other engines: the [Engines guide](../../docs/guides/engines.md#opensearch).
